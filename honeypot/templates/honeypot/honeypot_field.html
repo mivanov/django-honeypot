@@ -4,8 +4,7 @@
     </label>
     {% if use_js_field %}
     {% if display_script_tags %}<script type="text/javascript">{% endif %}
-        document.write('<input type="hidden" name="{{fieldname}}_js" value="1" />');
-    
+        document.write(unescape('%3Cinput%20type%3D%22hidden%22%20name%3D%22content2_js%22%20value%3D%221%22%20/%3E'));
     {% if display_script_tags %}</script>{% endif %}
     {% endif %}
 </div>
