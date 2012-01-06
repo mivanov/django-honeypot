@@ -17,7 +17,9 @@ def render_honeypot_field(field_name=None):
     use_js_field = getattr(settings, 'HONEYPOT_USE_JS_FIELD', False)
     display_script_tags = True
     
-    return {'fieldname': field_name, 'value': value, 'use_js_field': use_js_field}
+    return {'fieldname': field_name, 'value': value,
+            'display_script_tags': display_script_tags,
+            'use_js_field': use_js_field}
 
 
 @register.inclusion_tag('honeypot/honeypot_field.html')
